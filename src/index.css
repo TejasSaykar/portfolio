@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: 400; */
+  font-style: normal;
+}
+
+/* Width of the scrollbar */
+body {
+  scrollbar-width: thin; /* auto, thin, or none */
+  scrollbar-color: #343232; /* scrollbar-thumb color and scrollbar-track color */
+}
+
+/* Styling using ::-webkit-scrollbar for fallback in WebKit-based browsers */
+body {
+  scrollbar-width: thin;
+  scrollbar-color:  #333232;
+}
+
+/* For WebKit-based browsers */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #262525;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #383636;
+  border-radius: 10px;
+  border: 3px solid #565151;
+}
+
+
+/* Custom gradient border */
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  z-index: -1;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Change this to your desired gradient */
+  border-radius: inherit; /* Ensures the border radius matches the div */
+}
